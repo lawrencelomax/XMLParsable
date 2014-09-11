@@ -1,0 +1,6 @@
+[submodule "Externals/Swiftz"]
+	path = Externals/Swiftz
+	url = git@github.com:maxpow4h/swiftz.git
+[submodule "Externals/Quick"]
+	path = Externals/Quick
+	url = git@github.com:Quick/Quick.git

@@ -1,0 +1,35 @@
+<zoo>
+	<animals>
+		<animal>
+			<kind>cat</kind>
+			<nested_nonsense>
+				<name>grumpy</name>
+			</nested_nonsense>
+			<url>http://en.wikipedia.org/wiki/Grumpy_Cat</url>
+		</animal>
+		<animal>
+			<kind>cat</kind>
+			<nested_nonsense>
+				<name>long</name>
+			</nested_nonsense>
+			<url>http://knowyourmeme.com/memes/longcat</url>
+		</animal>
+		<animal>
+			<kind>dog</kind>
+			<nested_nonsense>
+				<name>i have no idea what i'm doing</name>
+			</nested_nonsense>
+			<url>http://knowyourmeme.com/memes/i-have-no-idea-what-im-doing</url>
+		</animal>
+	</animals>
+	<facilities>
+		<toilet>42</toilet>
+		<disabled_parking>true</disabled_parking>
+		<a_random_assortment_of_characters>sdfdf821n9sfa</a_random_assortment_of_characters>
+		<seriously>
+			<crazy_nested>
+				<drainage>Good</drainage>
+			</crazy_nested>
+		</seriously>
+	</facilities>
+</zoo>
