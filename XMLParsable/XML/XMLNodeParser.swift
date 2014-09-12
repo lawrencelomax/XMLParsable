@@ -14,17 +14,11 @@ public protocol XMLNodeParserType {
   class func createTreeWithURL(url: NSURL) -> Result<XMLNode>
 }
 
-public final class XMLNode: XMLParsableType {
+public struct XMLNode: XMLParsableType {
   public let name: String
   public let text: String?
   public let children: [XMLNode]
-  
-  init (name: String, text: String?, children: [XMLNode]) {
-    self.name = name
-    self.text = text
-    self.children = children
-  }
-    
+	
   public func parseChildren(elementName: String) -> [XMLNode] {
     return self.children.filter { node in
       return node.name == elementName
