@@ -37,7 +37,7 @@
 		21AEFF2019C2405E002DC67B /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFF1B19C2405E002DC67B /* ResultExtensions.swift */; };
 		21AEFF2119C2405E002DC67B /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFF1C19C2405E002DC67B /* SequenceExtension.swift */; };
 		21AEFF2219C2405E002DC67B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFF1D19C2405E002DC67B /* StringExtensions.swift */; };
-		21AEFF4019C24263002DC67B /* Zoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFF2319C240E2002DC67B /* Zoo.swift */; };
+		21FDEC9B19C3430400267347 /* Zoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FDEC9A19C3430400267347 /* Zoo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,9 +87,9 @@
 		21AEFF1B19C2405E002DC67B /* ResultExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultExtensions.swift; sourceTree = "<group>"; };
 		21AEFF1C19C2405E002DC67B /* SequenceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
 		21AEFF1D19C2405E002DC67B /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		21AEFF2319C240E2002DC67B /* Zoo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zoo.swift; sourceTree = "<group>"; };
 		21AEFF4719C2441E002DC67B /* XMLParsableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMLParsableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AEFF4A19C2441F002DC67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21FDEC9A19C3430400267347 /* Zoo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zoo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				21A3643619C311F90036E314 /* Fixtures.swift */,
-				21A3643719C311F90036E314 /* simple.xml */,
 				21A3643819C311F90036E314 /* simple_error.xml */,
-				21A3643A19C311F90036E314 /* zoo.xml */,
+				21A3643719C311F90036E314 /* simple.xml */,
 				21A3643B19C311F90036E314 /* zoo_highredundancy.xml */,
+				21FDEC9A19C3430400267347 /* Zoo.swift */,
+				21A3643A19C311F90036E314 /* zoo.xml */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -176,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				21AEFEC219C22E7F002DC67B /* XMLParsable.h */,
-				21AEFF2319C240E2002DC67B /* Zoo.swift */,
 				21AEFEC419C22FFA002DC67B /* Extensions */,
 				21AEFEA619C22E2F002DC67B /* Headers */,
 				21AEFEA819C22E37002DC67B /* XML */,
@@ -404,7 +404,6 @@
 				21AEFEB719C22E37002DC67B /* LibXMLBridging.m in Sources */,
 				21AEFEBB19C22E37002DC67B /* LibXMLNodeParserDOM.swift in Sources */,
 				21AEFF2019C2405E002DC67B /* ResultExtensions.swift in Sources */,
-				21AEFF4019C24263002DC67B /* Zoo.swift in Sources */,
 				21AEFF2219C2405E002DC67B /* StringExtensions.swift in Sources */,
 				21AEFF1F19C2405E002DC67B /* NumberExtensions.swift in Sources */,
 				21AEFEBE19C22E37002DC67B /* XMLDecode.swift in Sources */,
@@ -417,6 +416,7 @@
 			files = (
 				21A3644719C312380036E314 /* XMLNodeParserSpec.swift in Sources */,
 				21A3644B19C3128D0036E314 /* XMLPerformanceTests.swift in Sources */,
+				21FDEC9B19C3430400267347 /* Zoo.swift in Sources */,
 				21A3643019C310C70036E314 /* ResultMatchers.swift in Sources */,
 				21A3643C19C311F90036E314 /* Fixtures.swift in Sources */,
 				21A3644819C312380036E314 /* ZooSpec.swift in Sources */,
