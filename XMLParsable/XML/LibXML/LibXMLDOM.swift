@@ -33,12 +33,12 @@ internal final class LibXMLDOM {
     return NSError(domain: LibXMLDOMErrorDomain, code: 0, userInfo: [NSLocalizedDescriptionKey: message])
   }
   
-  internal class func createTreeWithURL(url: NSURL) -> Result<LibXMLDOM.Context> {
+  internal class func createWithURL(url: NSURL) -> Result<LibXMLDOM.Context> {
     let document = self.documentPointer(url)
     return { LibXMLDOM.Context(document: document, rootNode: $0) } <^> self.rootNode(document)
   }
   
-  internal class func createTreeWithData(data: NSData) -> Result<LibXMLDOM.Context> {
+  internal class func createWithData(data: NSData) -> Result<LibXMLDOM.Context> {
     let document = self.documentPointer(data)
     return { LibXMLDOM.Context(document: document, rootNode: $0) } <^> self.rootNode(document)
   }

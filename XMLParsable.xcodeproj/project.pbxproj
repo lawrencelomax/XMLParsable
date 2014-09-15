@@ -28,7 +28,6 @@
 		21AEFEBC19C22E37002DC67B /* LibXMLNodeParserReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFEB019C22E37002DC67B /* LibXMLNodeParserReader.swift */; };
 		21AEFEBD19C22E37002DC67B /* LibXMLReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFEB119C22E37002DC67B /* LibXMLReader.swift */; };
 		21AEFEBE19C22E37002DC67B /* XMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFEB219C22E37002DC67B /* XMLDecode.swift */; };
-		21AEFEBF19C22E37002DC67B /* XMLNavigatingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFEB319C22E37002DC67B /* XMLNavigatingParser.swift */; };
 		21AEFEC019C22E37002DC67B /* XMLNodeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFEB419C22E37002DC67B /* XMLNodeParser.swift */; };
 		21AEFEC119C22E37002DC67B /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFEB519C22E37002DC67B /* XMLParser.swift */; };
 		21AEFEC319C22E8A002DC67B /* XMLParsable.h in Headers */ = {isa = PBXBuildFile; fileRef = 21AEFEC219C22E7F002DC67B /* XMLParsable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,7 +77,6 @@
 		21AEFEB019C22E37002DC67B /* LibXMLNodeParserReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibXMLNodeParserReader.swift; sourceTree = "<group>"; };
 		21AEFEB119C22E37002DC67B /* LibXMLReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibXMLReader.swift; sourceTree = "<group>"; };
 		21AEFEB219C22E37002DC67B /* XMLDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLDecode.swift; sourceTree = "<group>"; };
-		21AEFEB319C22E37002DC67B /* XMLNavigatingParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLNavigatingParser.swift; sourceTree = "<group>"; };
 		21AEFEB419C22E37002DC67B /* XMLNodeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLNodeParser.swift; sourceTree = "<group>"; };
 		21AEFEB519C22E37002DC67B /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		21AEFEC219C22E7F002DC67B /* XMLParsable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLParsable.h; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 			children = (
 				21AEFEA919C22E37002DC67B /* LibXML */,
 				21AEFEB219C22E37002DC67B /* XMLDecode.swift */,
-				21AEFEB319C22E37002DC67B /* XMLNavigatingParser.swift */,
 				21AEFEB419C22E37002DC67B /* XMLNodeParser.swift */,
 				21AEFEB519C22E37002DC67B /* XMLParser.swift */,
 			);
@@ -398,7 +395,6 @@
 				21AEFEBC19C22E37002DC67B /* LibXMLNodeParserReader.swift in Sources */,
 				21AEFEBD19C22E37002DC67B /* LibXMLReader.swift in Sources */,
 				21AEFF1E19C2405E002DC67B /* ArrayExtensions.swift in Sources */,
-				21AEFEBF19C22E37002DC67B /* XMLNavigatingParser.swift in Sources */,
 				21AEFEB819C22E37002DC67B /* LibXMLDOM.swift in Sources */,
 				21AEFF2119C2405E002DC67B /* SequenceExtension.swift in Sources */,
 				21AEFEB719C22E37002DC67B /* LibXMLBridging.m in Sources */,

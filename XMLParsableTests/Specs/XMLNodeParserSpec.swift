@@ -15,24 +15,24 @@ class XMLNodeParserSpec: QuickSpec {
   override func spec() {
     context("LibXML2 - DOM") {
       it("should parse a simple xml") {
-        let result = LibXMLNodeParserDOM.createTreeWithURL(Fixtures.Simple.url())
+        let result = LibXMLNodeParserDOM.createWithURL(Fixtures.Simple.url())
         expect(result).to(beAValue())
       }
       
       it("should return an error with dodgy xml") {
-        let result = LibXMLNodeParserDOM.createTreeWithURL(Fixtures.Simple.Error.url())
+        let result = LibXMLNodeParserDOM.createWithURL(Fixtures.Simple.Error.url())
         expect(result).to(beAnError())
       }
     }
     
     context("LibXML2 - Reader") {
       it("should parse a simple xml") {
-        let result = LibXMLNodeParserReader.createTreeWithURL(Fixtures.Simple.url())
+        let result = LibXMLNodeParserReader.createWithURL(Fixtures.Simple.url())
         expect(result).to(beAValue())
       }
       
       it("should return an error with dodgy xml") {
-        let result = LibXMLNodeParserDOM.createTreeWithURL(Fixtures.Simple.Error.url())
+        let result = LibXMLNodeParserDOM.createWithURL(Fixtures.Simple.Error.url())
         expect(result).to(beAnError())
       }
     }

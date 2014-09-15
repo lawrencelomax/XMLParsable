@@ -18,7 +18,7 @@ class ZooDecodePerformanceTestsFile: XCTestCase {
     
     self.measureBlock {
       for _ in 0...10 {
-        let result = LibXMLNodeParserDOM.createTreeWithURL(url) >>- Zoo.decode
+        let result = LibXMLNodeParserDOM.createWithURL(url) >>- Zoo.decode
         expect(result).to(beAValue())
       }
     }
@@ -29,7 +29,7 @@ class ZooDecodePerformanceTestsFile: XCTestCase {
     
     self.measureBlock {
       for _ in 0...10 {
-        let result = LibXMLNodeParserReader.createTreeWithURL(url) >>- Zoo.decode
+        let result = LibXMLNodeParserReader.createWithURL(url) >>- Zoo.decode
         expect(result).to(beAValue())
       }
     }
@@ -53,7 +53,7 @@ class ZooDecodePerformanceTestsFileHighRedundancy: XCTestCase {
     
     self.measureBlock {
       for _ in 0...10 {
-        let result = LibXMLNodeParserDOM.createTreeWithURL(url) >>- Zoo.decode
+        let result = LibXMLNodeParserDOM.createWithURL(url) >>- Zoo.decode
         expect(result).to(beAValue())
       }
     }
@@ -64,7 +64,7 @@ class ZooDecodePerformanceTestsFileHighRedundancy: XCTestCase {
     
     self.measureBlock {
       for _ in 0...10 {
-        let result = LibXMLNodeParserReader.createTreeWithURL(url) >>- Zoo.decode
+        let result = LibXMLNodeParserReader.createWithURL(url) >>- Zoo.decode
         expect(result).to(beAValue())
       }
     }
@@ -88,7 +88,7 @@ class ZooDecodePerformanceTestsDataHighRedundancy: XCTestCase {
     
     self.measureBlock {
       for _ in 0...10 {
-        let result = LibXMLNodeParserDOM.createTreeWithData(data) >>- Zoo.decode
+        let result = LibXMLNodeParserDOM.createWithData(data) >>- Zoo.decode
         expect(result).to(beAValue())
       }
     }
@@ -99,7 +99,7 @@ class ZooDecodePerformanceTestsDataHighRedundancy: XCTestCase {
     
     self.measureBlock {
       for _ in 0...10 {
-        let result = LibXMLNodeParserReader.createTreeWithData(data) >>- Zoo.decode
+        let result = LibXMLNodeParserReader.createWithData(data) >>- Zoo.decode
         expect(result).to(beAValue())
       }
     }
@@ -123,7 +123,7 @@ class ZooDecodePerformanceTestsData: XCTestCase {
     
     self.measureBlock {
       for _ in 0...10 {
-        let result = LibXMLNodeParserDOM.createTreeWithData(data) >>- Zoo.decode
+        let result = LibXMLNodeParserDOM.createWithData(data) >>- Zoo.decode
         expect(result).to(beAValue())
       }
     }
@@ -134,7 +134,7 @@ class ZooDecodePerformanceTestsData: XCTestCase {
     
     self.measureBlock {
       for _ in 0...10 {
-        let result = LibXMLNodeParserReader.createTreeWithData(data) >>- Zoo.decode
+        let result = LibXMLNodeParserReader.createWithData(data) >>- Zoo.decode
         expect(result).to(beAValue())
       }
     }

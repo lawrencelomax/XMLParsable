@@ -66,12 +66,12 @@ class ZooSpec: QuickSpec {
 		
 		describe("node parser dom - file"){
 			it("should decode with success") {
-				let result = LibXMLNodeParserDOM.createTreeWithURL(Fixtures.Zoo.url()) >>- Zoo.decode
+				let result = LibXMLNodeParserDOM.createWithURL(Fixtures.Zoo.url()) >>- Zoo.decode
 				expect(result).to(beAValue())
 			}
 			
 			it("should decode properties") {
-				let zoo: Zoo! = LibXMLNodeParserDOM.createTreeWithURL(Fixtures.Zoo.url()) >>- Zoo.decode |> resultToOptional
+				let zoo: Zoo! = LibXMLNodeParserDOM.createWithURL(Fixtures.Zoo.url()) >>- Zoo.decode |> resultToOptional
 				
 				expect(zoo.toiletCount).to(equal(42))
 				expect(zoo.disabledParking).to(equal(true))
@@ -91,12 +91,12 @@ class ZooSpec: QuickSpec {
 		
 		describe("node parser dom - data"){
 			it("should decode with success") {
-				let result = LibXMLNodeParserDOM.createTreeWithData(Fixtures.Zoo.data()) >>- Zoo.decode
+				let result = LibXMLNodeParserDOM.createWithData(Fixtures.Zoo.data()) >>- Zoo.decode
 				expect(result).to(beAValue())
 			}
 			
 			it("should decode properties") {
-				let zoo: Zoo! = LibXMLNodeParserDOM.createTreeWithData(Fixtures.Zoo.data()) >>- Zoo.decode |> resultToOptional
+				let zoo: Zoo! = LibXMLNodeParserDOM.createWithData(Fixtures.Zoo.data()) >>- Zoo.decode |> resultToOptional
 				
 				expect(zoo.toiletCount).to(equal(42))
 				expect(zoo.disabledParking).to(equal(true))
@@ -116,12 +116,12 @@ class ZooSpec: QuickSpec {
 		
 		describe("node parser reader - file"){
 			it("should decode with success") {
-				let result = LibXMLNodeParserReader.createTreeWithURL(Fixtures.Zoo.url()) >>- Zoo.decode
+				let result = LibXMLNodeParserReader.createWithURL(Fixtures.Zoo.url()) >>- Zoo.decode
 				expect(result).to(beAValue())
 			}
 			
 			it("should decode properties") {
-				let zoo: Zoo! = LibXMLNodeParserReader.createTreeWithURL(Fixtures.Zoo.url()) >>- Zoo.decode |> resultToOptional
+				let zoo: Zoo! = LibXMLNodeParserReader.createWithURL(Fixtures.Zoo.url()) >>- Zoo.decode |> resultToOptional
 				
 				expect(zoo.toiletCount).to(equal(42))
 				expect(zoo.disabledParking).to(equal(true))
@@ -141,12 +141,12 @@ class ZooSpec: QuickSpec {
 		
 		describe("node parser reader - data"){
 			it("should decode with success") {
-				let result = LibXMLNodeParserReader.createTreeWithData(Fixtures.Zoo.data()) >>- Zoo.decode
+				let result = LibXMLNodeParserReader.createWithData(Fixtures.Zoo.data()) >>- Zoo.decode
 				expect(result).to(beAValue())
 			}
 			
 			it("should decode properties") {
-				let zoo: Zoo! = LibXMLNodeParserReader.createTreeWithData(Fixtures.Zoo.data()) >>- Zoo.decode |> resultToOptional
+				let zoo: Zoo! = LibXMLNodeParserReader.createWithData(Fixtures.Zoo.data()) >>- Zoo.decode |> resultToOptional
 				
 				expect(zoo.toiletCount).to(equal(42))
 				expect(zoo.disabledParking).to(equal(true))

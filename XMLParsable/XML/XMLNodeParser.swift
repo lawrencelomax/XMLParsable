@@ -9,11 +9,6 @@
 import Foundation
 import swiftz_core
 
-public protocol XMLNodeParserType {
-  class func createTreeWithData(data: NSData) -> Result<XMLNode>
-  class func createTreeWithURL(url: NSURL) -> Result<XMLNode>
-}
-
 public struct XMLNode: XMLParsableType {
   public let name: String
   public let text: String?
@@ -30,13 +25,13 @@ public struct XMLNode: XMLParsableType {
   }
 }
 
-public class XMLNodeParser: XMLNodeParserType {
-  public class func createTreeWithData(data: NSData) -> Result<XMLNode> {
-    return LibXMLNodeParserReader.createTreeWithData(data)
+public class XMLNodeParser: XMLParsableFactoryType {
+  public class func createWithData(data: NSData) -> Result<XMLNode> {
+    return LibXMLNodeParserReader.createWithData(data)
   }
   
-  public class func createTreeWithURL(url: NSURL) -> Result<XMLNode> {
-    return LibXMLNodeParserReader.createTreeWithURL(url)
+  public class func createWithURL(url: NSURL) -> Result<XMLNode> {
+    return LibXMLNodeParserReader.createWithURL(url)
   }
   
   public class func recursiveDescription(node: XMLNode) {

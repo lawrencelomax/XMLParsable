@@ -9,12 +9,12 @@
 import Foundation
 import swiftz_core
 
-public class LibXMLNodeParserReader: XMLNodeParserType {
-  public class func createTreeWithData(data: NSData) -> Result<XMLNode> {
+public class LibXMLNodeParserReader: XMLParsableFactoryType {
+  public class func createWithData(data: NSData) -> Result<XMLNode> {
     return self.processContext(LibXMLReader.createReader(data))
   }
   
-  public class func createTreeWithURL(url: NSURL) -> Result<XMLNode> {
+  public class func createWithURL(url: NSURL) -> Result<XMLNode> {
     return self.processContext(LibXMLReader.createReader(url))
   }
     

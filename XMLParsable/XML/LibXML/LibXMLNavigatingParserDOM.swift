@@ -9,7 +9,7 @@
 import Foundation
 import swiftz_core
 
-public final class LibXMLNavigatingParserDOM: XMLNavigatingParserType, XMLParsableType {
+public final class LibXMLNavigatingParserDOM: XMLParsableType, XMLParsableFactoryType {
   private let node: xmlNodePtr
   private let context: LibXMLDOM.Context?
   
@@ -27,11 +27,11 @@ public final class LibXMLNavigatingParserDOM: XMLNavigatingParserType, XMLParsab
   }
   
   public class func createWithData(data: NSData) -> Result<LibXMLNavigatingParserDOM> {
-    return { LibXMLNavigatingParserDOM(context: $0) } <^> LibXMLDOM.createTreeWithData(data)
+    return { LibXMLNavigatingParserDOM(context: $0) } <^> LibXMLDOM.createWithData(data)
   }
   
   public class func createWithURL(url: NSURL) -> Result<LibXMLNavigatingParserDOM> {
-    return { LibXMLNavigatingParserDOM(context: $0) } <^> LibXMLDOM.createTreeWithURL(url)
+    return { LibXMLNavigatingParserDOM(context: $0) } <^> LibXMLDOM.createWithURL(url)
   }
   
   public func parseChildren(elementName: String) -> [LibXMLNavigatingParserDOM] {

@@ -28,6 +28,15 @@ public protocol XMLParsableType {
 }
 
 /**
+* A Protocol that defines ways of creating an XMLParsableTypes.
+*/
+public protocol XMLParsableFactoryType {
+  typealias xml: XMLParsableType
+  class func createWithData(data: NSData) -> Result<xml>
+  class func createWithURL(url: NSURL) -> Result<xml>
+}
+
+/**
 *  A Helper with Curried Parsing functions and functions composed from the Parsable primitives.
 *  This keeps the XMLParsableType as minimal as possible, and this class as convenient as possible.
 */
