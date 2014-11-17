@@ -14,7 +14,11 @@ import XMLParsable
 func beAValue<T>() -> MatcherFunc<Result<T>> {
   return MatcherFunc { actualThunk, failureMessage in
     let actual = actualThunk.evaluate()
-    switch actual {
+    if actual == nil {
+      failureMessage.postfixMessage = "be a value: got nothing"
+      return false
+    }
+    switch actual! {
       case .Error(let error):
         failureMessage.postfixMessage = "be a value: got \(error)"
         return false
@@ -27,8 +31,11 @@ func beAValue<T>() -> MatcherFunc<Result<T>> {
 func beAnError<T>() -> MatcherFunc<Result<T>> {
   return MatcherFunc { actualThunk, failureMessage in
     let actual = actualThunk.evaluate()
-    failureMessage.postfixMessage = "be an error"
-    switch actual {
+    if actual == nil {
+      failureMessage.postfixMessage = "be an error: got nothing"
+      return false
+    }
+    switch actual! {
       case .Value(let box):
         failureMessage.postfixMessage = "be an error: get \(box.value)"
         return false

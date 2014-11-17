@@ -80,7 +80,7 @@ internal final class LibXMLDOM {
   }
   
   private class func documentPointer(data: NSData) -> xmlDocPtr {
-    let string = NSString(data: data, encoding: NSUTF8StringEncoding)
+    let string = NSString(data: data, encoding: NSUTF8StringEncoding)!
     let cString = string.UTF8String
     let length = strlen(cString)
     return xmlParseMemory(cString, Int32(length))

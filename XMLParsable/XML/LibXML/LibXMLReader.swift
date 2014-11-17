@@ -120,7 +120,7 @@ internal final class LibXMLReader {
   }
   
   private class func createReaderFrom(data: NSData) -> xmlTextReaderPtr {
-    let string = NSString(data: data, encoding: NSUTF8StringEncoding)
+    let string = NSString(data: data, encoding: NSUTF8StringEncoding)!
     let cString = string.UTF8String
     let length = strlen(cString)
     return xmlReaderForMemory(cString, Int32(length), "foo.bar", nil, 0)
@@ -133,12 +133,12 @@ extension LibXMLReaderType {
   }
   
   static func forceMake(value: Int32) -> LibXMLReaderType {
-    return LibXMLReaderType.fromRaw(Int(value))!
+    return LibXMLReaderType(rawValue: Int(value))!
   }
 }
 
 extension LibXMLReaderMode {
   static func forceMake(value: Int32) -> LibXMLReaderMode {
-    return LibXMLReaderMode.fromRaw(Int(value))!
+    return LibXMLReaderMode(rawValue: Int(value))!
   }
 }

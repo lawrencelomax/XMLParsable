@@ -55,7 +55,7 @@ public class LibXMLNodeParserReader: XMLParsableFactoryType {
           let childResult = self.parseRecursive(reader, sequence)
           switch childResult {
           case .Error(let error): return childResult
-          case .Value(let box): children.append(childResult.toOptional()!)
+          case .Value(let box): children.append(ResultExt.toOptional(childResult)!)
           }
         case .END_ELEMENT:
           assert(name == LibXMLReaderGetName(reader), "BEGIN AND END NOT MATCHED")

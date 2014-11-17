@@ -15,10 +15,12 @@ public protocol XMLDecoderType {
   class func decode<X: XMLParsableType>(xml: X) -> Result<Self>
 }
 
-public  func decodeError(message: String) -> NSError {
-  return NSError(domain:ModelDecodeErrorDomain, code: 0, userInfo: [NSLocalizedDescriptionKey: message])
-}
+public class ModelDecode {
+  public class func error(message: String) -> NSError {
+    return NSError(domain:ModelDecodeErrorDomain, code: 0, userInfo: [NSLocalizedDescriptionKey: message])
+  }
 
-public func promoteDecodeError<V>(message: String)(value: V?) -> Result<V> {
-  return Result.promote(decodeError(message))(value: value)
+  public class func promoteError<V>(message: String)(value: V?) -> Result<V> {
+    return ResultExt.promote(ModelDecode.error(message))(value: value)
+  }
 }

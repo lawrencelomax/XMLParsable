@@ -9,7 +9,7 @@
 import Foundation
 
 private func dataFromURL(url: NSURL) -> NSData {
-  return NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions(), error: nil)!
+  return NSData(contentsOfURL: url, options: NSDataReadingOptions(), error: nil)!
 }
 
 private func resourceWithName(name: String, fileExtension: String) -> NSURL {

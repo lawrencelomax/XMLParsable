@@ -16,8 +16,8 @@ func InMyDomain(path: String) -> String {
 extension String {
   public static func withContentsOf(url: NSURL) -> Result<String> {
     var error: NSError? = nil
-    let string = self.stringWithContentsOfURL(url, usedEncoding: nil, error: &error)
-    return Result.construct(string)(maybeError: error)
+    let string = NSString(contentsOfURL: url, usedEncoding: nil, error: &error)
+    return ResultExt.construct(string)(maybeError: error)
   }
   
   public func base64EncodedString() -> String {
