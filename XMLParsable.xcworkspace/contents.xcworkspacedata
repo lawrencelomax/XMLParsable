@@ -8,7 +8,7 @@
       location = "group:Externals/Swiftz/swiftz_core/swiftz_core.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Externals/Quick/Quick/Quick.xcodeproj">
+      location = "group:Externals/Quick/Quick.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Externals/Quick/Externals/Nimble/Nimble.xcodeproj">
