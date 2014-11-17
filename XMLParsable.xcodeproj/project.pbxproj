@@ -37,6 +37,7 @@
 		21AEFF2119C2405E002DC67B /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFF1C19C2405E002DC67B /* SequenceExtension.swift */; };
 		21AEFF2219C2405E002DC67B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEFF1D19C2405E002DC67B /* StringExtensions.swift */; };
 		21FDEC9B19C3430400267347 /* Zoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FDEC9A19C3430400267347 /* Zoo.swift */; };
+		AA93E69A1A1A8281006F2371 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93E6991A1A8281006F2371 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		21AEFF4719C2441E002DC67B /* XMLParsableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMLParsableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AEFF4A19C2441F002DC67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21FDEC9A19C3430400267347 /* Zoo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zoo.swift; sourceTree = "<group>"; };
+		AA93E6991A1A8281006F2371 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 				21AEFF1B19C2405E002DC67B /* ResultExtensions.swift */,
 				21AEFF1C19C2405E002DC67B /* SequenceExtension.swift */,
 				21AEFF1D19C2405E002DC67B /* StringExtensions.swift */,
+				AA93E6991A1A8281006F2371 /* Functions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				21AEFF1E19C2405E002DC67B /* ArrayExtensions.swift in Sources */,
 				21AEFEB819C22E37002DC67B /* LibXMLDOM.swift in Sources */,
 				21AEFF2119C2405E002DC67B /* SequenceExtension.swift in Sources */,
+				AA93E69A1A1A8281006F2371 /* Functions.swift in Sources */,
 				21AEFEB719C22E37002DC67B /* LibXMLBridging.m in Sources */,
 				21AEFEBB19C22E37002DC67B /* LibXMLNodeParserDOM.swift in Sources */,
 				21AEFF2019C2405E002DC67B /* ResultExtensions.swift in Sources */,

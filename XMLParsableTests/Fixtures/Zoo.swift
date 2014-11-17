@@ -67,6 +67,7 @@ public struct Animal: XMLDecoderType {
   }
 }
 
+
 public struct Zoo: XMLDecoderType {
   public let toiletCount: Int
   public let disabledParking: Bool
@@ -78,11 +79,20 @@ public struct Zoo: XMLDecoderType {
   }
   
   public static func decode<X : XMLParsableType>(xml: X) -> Result<Zoo> {
-    let toiletCount =  XMLParser.parseChildRecusiveText(["facilities", "toilet"])(xml: xml) >>- (XMLParser.promoteError("Could not intepret 'toilet' as int'") • Int.parseString)
-    let disabledParking = XMLParser.parseChildRecusiveText(["facilities", "disabled_parking"])(xml: xml) >>- (XMLParser.promoteError("Could interpret 'disabled_parking' as a Bool") • Bool.parseString)
+    let toiletCount =  XMLParser.parseChildRecusiveText(["facilities", "toilet"])(xml: xml) >>- (Int.parseString <!> XMLParser.promoteError("Could not intepret 'toilet' as int'"))
+    let disabledParking = XMLParser.parseChildRecusiveText(["facilities", "disabled_parking"])(xml: xml) >>- (Bool.parseString <!> XMLParser.promoteError("Could interpret 'disabled_parking' as a Bool"))
     let drainage = XMLParser.parseChildRecusiveText(["facilities", "seriously", "crazy_nested", "drainage"])(xml: xml)
     let animals = XMLParser.parseChild("animals")(xml: xml) >>- XMLParser.parseChildren("animal") >>- resultMapC(Animal.decode)
     
     return self.build <^> toiletCount <*> disabledParking <*> drainage <*> animals
+  }
+
+  public static func decodeKleisli<X : XMLParsableType>(xml: X) -> Result<Zoo> {
+    let toiletCount = (XMLParser.parseChildRecusiveText(["facilities", "toilet"]) as X -> Result<String>) >=> (Int.parseString <!> XMLParser.promoteError("Could not intepret 'toilet' as int'"))
+    let disabledParking = (XMLParser.parseChildRecusiveText(["facilities", "disabled_parking"]) as X -> Result<String>) >=> (Bool.parseString <!> XMLParser.promoteError("Could interpret 'disabled_parking' as a Bool"))
+    let drainage = XMLParser.parseChildRecusiveText(["facilities", "seriously", "crazy_nested", "drainage"]) as X -> Result<String>
+    let animals = (XMLParser.parseChild("animals") as X -> Result<X>) >=> XMLParser.parseChildren("animal") >=> resultMapC(Animal.decode)
+
+    return self.build <^> toiletCount(xml) <*> disabledParking(xml) <*> drainage(xml) <*> animals(xml)
   }
 }
